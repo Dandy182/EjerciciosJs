@@ -16,15 +16,13 @@ function promedio(array) {
         sum = sum + numero;
     });
 
-
-
     let prom = (sum / array.length);
-
     console.log(`1. el promedio es ${prom}`);
     
 }
 
 let array = [1, 10, 20, 30, 40]
+
 promedio(array);
 
 /* Ejercicio 2 */
@@ -52,11 +50,9 @@ function salarioAnual(empleados, nombre) {
     // Tu código aca:
     var resultado = 0;
     empleados.map(function(empleado){
-       
         if(empleado.nombre == nombre){
             resultado = empleado.salario;
         }
-
     })
 
     console.log(`2. El sueldo de ${nombre} es ${resultado}`);
@@ -65,4 +61,61 @@ function salarioAnual(empleados, nombre) {
 
 var empleados = [{ nombre: 'Manuel', salario: 1000},{nombre: 'Flor',salario: 4000},{ nombre: 'Maria', salario: 500}];
 
-salarioAnual(empleados, 'Manuel')
+salarioAnual(empleados, 'Manuel');
+
+/* Ejercicio 3 */
+
+function encontrarLaPalabra(string) {
+    // Escribir una funcion que reciba un string (string) y retorne true si encuentra la palabra "henry" adentro.
+    // si no, retorna false.
+    // Ej:
+    // encontrarLaBomba('bienvenidos a henry') => true;
+    // encontrarLaBomba('hola que tal, como va?!') => false;
+  
+    // Tu código:
+    let resultado = false;
+    if(string.includes('henry')){
+        resultado = true;
+    }
+
+    console.log(`3. la palabra henry se encuentra en el string = ${resultado}`);
+
+}
+
+let palabra = 'bienvenidos a henry'
+
+encontrarLaPalabra(palabra)
+
+/* Ejercicio 4 */
+
+function index() {
+    // Escribi una función encontraIndex en el prototipo de Arrays,
+    // que recibe un elemento.
+    // La function tiene que devolver el indice (index) del primer elemento que coincida con el pasado como parametro dentro del array.
+    // Si el elemento se repite dentro del Array, este devuelve el indice del Primer elemento.
+    // Si no existe ese elemento la funcion debe devolver -1
+    // NO USAR LA FUNCION indexOf DE LOS ARREGLOS.
+    // ej:
+    // var numeros = [5, 6, 4, 65, 8, 4]
+    // numeros.encontraIndex(4) debe devolver 2.
+    // ya que el numero 4 se encuentra en la posicion 2 dentro del array.
+    // numeros.encontraIndex(23) debe devolver -1 ya que ese elemento no existe en ese array.
+  
+    // Tu código aca:
+
+    const indice = function(parametro){
+        let resultado = 0;
+        for(let i = 0; i<this.length;i++){
+
+        }
+
+        console.log(resultado);
+    }
+
+    Array.prototype.index = indice;
+
+}
+
+let numeros = [5, 6, 4, 65, 8, 4];
+
+numeros.index(4);
