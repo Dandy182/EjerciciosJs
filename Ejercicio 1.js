@@ -103,19 +103,19 @@ function index() {
   
     // Tu código aca:
 
-    const indice = function(parametro){
-        let resultado = 0;
-        for(let i = 0; i<this.length;i++){
-
+    let indice = function(valor){
+        for(var i = 0; i < this.length;i++){
+            if(this[i] == valor){
+                return i;
+            }
         }
-
-        console.log(resultado);
+        return -1;
     }
 
-    Array.prototype.index = indice;
+    return Array.prototype.encontrarIndice = indice;
 
 }
 
-let numeros = [5, 6, 4, 65, 8, 4];
-
-numeros.index(4);
+index();
+let numeros = [5, 6, 4, 6, 5, 8, 4];
+console.log(numeros.encontrarIndice(4))
