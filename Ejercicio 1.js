@@ -124,7 +124,7 @@ console.log(`4. el indice es ${numeros.encontrarIndice(4)}`);
 
 /* Ejercicio 5*/
 
-const SUMMER = [
+const contraseña = [
     'Sunshine warming my toes,',
     'Underwater fun with my friends.',
     'Making homemade ice cream on the porch,',
@@ -135,19 +135,44 @@ const SUMMER = [
 
 function frontDoorResponse(line) {
     var caracteres = [];
-    var contador = 0;
-    line.forEach(letter =>{
-      caracteres[contador] = letter[0];
-      contador++;
+
+    for(let i =0; i<line.length;i++){
+        caracteres[i] = line[i][0];
     }
-      
-    )
     var nuevoString = caracteres.toString()
 
     console.log(`5. la contraseña es = ${nuevoString.replace(/,/g,"")}`);
-
     return nuevoString.replace(/,/g,"");
   }
 
-  frontDoorResponse(SUMMER);
+ let pass = frontDoorResponse(contraseña);
 
+
+/* Ejercicio 6*/
+
+/*Capitalize a word
+
+Now that you have all the correct letters, all you need to do to get the password for the front door is to correctly capitalize the word.
+
+Implement the function frontDoorPassword that accepts a string (the combined letters you found in task 1) and returns it correctly capitalized.*/
+
+
+function frontDoorPassword(word){
+    let resultado = new Array();
+
+    for(let i = 0; i < word.length;i++){
+        if(i == 0){
+            resultado.push(word[i].toUpperCase());
+        }else{
+            resultado.push(word[i].toLowerCase());
+        }
+    }
+
+    let string = resultado.toString();
+
+
+    console.log(`6. Capitalizar texto: ${string.replace(/,/g,'')}`);
+    
+}
+
+frontDoorPassword(pass);
