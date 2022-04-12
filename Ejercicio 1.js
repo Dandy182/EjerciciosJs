@@ -142,20 +142,12 @@ function frontDoorResponse(line) {
     }
       
     )
+    var nuevoString = caracteres.toString()
 
-    console.log(caracteres)
-    return caracteres;
+    console.log(`5. la contraseña es = ${nuevoString.replace(/,/g,"")}`);
+
+    return nuevoString.replace(/,/g,"");
   }
 
   frontDoorResponse(SUMMER);
 
-  const SOPHIA = [
-    'Serene, calming quality',
-    'Organized, you always have it together',
-    'Picturesque, strikingly beautiful',
-    'Honest, so genuine',
-    'Imaginative, a creative mind',
-    'Alluring, so attractive',
-  ];
-
-  frontDoorResponse(SOPHIA);
