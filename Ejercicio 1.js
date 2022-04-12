@@ -118,25 +118,44 @@ function index() {
 
 index();
 let numeros = [5, 6, 4, 6, 5, 8, 4];
-console.log(numeros.encontrarIndice(4))
-
-/*Often, the freelancer's clients hire him for projects spanning over multiple months.
- In these cases, the freelancer decides to offer a discount for every full month, and the 
- remaining days are billed at day rate. Every month has 22 billable days. Help him estimate 
- his cost for such projects, given an hourly rate, the number of days the project spans, and
- a monthly discount rate. The discount is always passed as a number, where 42% becomes 0.42. T
- he result must be rounded up to the nearest whole number.
- 
- priceWithMonthlyDiscount(89, 230, 0.42);
-// => 97972
-
-*/
+console.log(`4. el indice es ${numeros.encontrarIndice(4)}`);
 
 
-function priceWithMonthlyDiscount(ratePerHour, numDays, discount) {
-    let resultado = 0;
 
-    return resultado;
+/* Ejercicio 5*/
+
+const SUMMER = [
+    'Sunshine warming my toes,',
+    'Underwater fun with my friends.',
+    'Making homemade ice cream on the porch,',
+    'Many long nights catching fireflies.',
+    'Early morning walks to the creek,',
+    'Reveling in the freedom of lazy days.',
+  ];
+
+function frontDoorResponse(line) {
+    var caracteres = [];
+    var contador = 0;
+    line.forEach(letter =>{
+      caracteres[contador] = letter[0];
+      contador++;
     }
+      
+    )
 
-    priceWithMonthlyDiscount(89, 230, 0.42);
+    console.log(caracteres)
+    return caracteres;
+  }
+
+  frontDoorResponse(SUMMER);
+
+  const SOPHIA = [
+    'Serene, calming quality',
+    'Organized, you always have it together',
+    'Picturesque, strikingly beautiful',
+    'Honest, so genuine',
+    'Imaginative, a creative mind',
+    'Alluring, so attractive',
+  ];
+
+  frontDoorResponse(SOPHIA);
