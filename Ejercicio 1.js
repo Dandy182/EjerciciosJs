@@ -201,7 +201,3 @@ function priceWithMonthlyDiscount(ratePerHour, numDays, discount) {
 
 priceWithMonthlyDiscount(89, 230, 0.42);
 // => 97972
-priceWithMonthlyDiscount(16, 70, 0);
-//=>8960
-priceWithMonthlyDiscount(16, 130, 0.15);
-//=>14528
