@@ -176,3 +176,32 @@ function frontDoorPassword(word){
 }
 
 frontDoorPassword(pass);
+
+/* Calculate the discounted rate for large project*/
+
+/*Calculate the discounted rate for large projects
+
+Often, the freelancer's clients hire him for projects spanning over multiple months. In these cases, 
+the freelancer decides to offer a discount for every full month, and the remaining days are billed at day rate. 
+Every month has 22 billable days. Help him estimate his cost for such projects, given an hourly rate, 
+the number of days the project spans, and a monthly discount rate. The discount is always passed as a number, 
+where 42% becomes 0.42. The result must be rounded up to the nearest whole number. */
+
+
+function priceWithMonthlyDiscount(ratePerHour, numDays, discount) {
+    let ratePerDay = (ratePerHour * 8);
+    let months = Math.floor(numDays / 22);
+    let diaSobrante = ((((numDays / 22) - months) * 22) * ratePerDay);
+    let ratePerMount = (months * (ratePerDay * 22));
+
+    let resultado = Math.ceil((ratePerMount - (ratePerMount * discount)) + diaSobrante);
+    console.log(resultado);
+ 
+}
+
+priceWithMonthlyDiscount(89, 230, 0.42);
+// => 97972
+priceWithMonthlyDiscount(16, 70, 0);
+//=>8960
+priceWithMonthlyDiscount(16, 130, 0.15);
+//=>14528
