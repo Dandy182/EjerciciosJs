@@ -177,7 +177,7 @@ function frontDoorPassword(word){
 
 frontDoorPassword(pass);
 
-/* Calculate the discounted rate for large project*/
+/* Ejercicio 7 */
 
 /*Calculate the discounted rate for large projects
 
