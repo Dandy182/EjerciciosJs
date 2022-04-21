@@ -215,45 +215,46 @@ Li Mei would like to know in advance how many limes she needs to cut. The limesT
 to cut.*/
 function limesToCut(wedgesNeeded, limes) {
     let rodajasNuevas = 0,
-        contador = 1;
+        contador = 0;
 
         if(wedgesNeeded <= 0 || limes <= 0){
             contador == 0;
         }else{
             while(rodajasNuevas < wedgesNeeded){
-                let 
+                let lime = limes.shift();
 
-                switch(limes[0]){
+                switch(lime){
                     case 'small':
-                        rodajasNuevas = rodajasNuevas+ 6;
-                        limes.shift()
-                        contador++;
-                        console.log(rodajasNuevas, contador);
+                        rodajasNuevas = rodajasNuevas + 6;
                         break;
                     case 'medium':
-                        rodajasNuevas = rodajasNuevas + 8 ;
-                        limes.shift()
-                        contador++;
-                        console.log(rodajasNuevas, contador);
+                        rodajasNuevas = rodajasNuevas + 8;
                         break;
                     case 'large':
                         rodajasNuevas = rodajasNuevas + 10;
-                        limes.shift();
-                        contador++;
-                        console.log(rodajasNuevas, contador);
                         break;
                     default:
-                        continue;
-                        break;
+                        continue; 
                 }
-                console.log(limes);
+                contador++;
+                console.log(rodajasNuevas, lime, contador);
 
             }
         }
  
-    console.log(contador);
+
     
   }
+  const limes = [
+    'small',
+    'large',
+    'large',
+    'medium',
+    'small',
+    'large',
+    'large',
+    'medium',
+  ];
 
-limesToCut(25, ['small', 'small', 'large', 'medium', 'small']);
-l
+limesToCut(42, limes);
+limesToCut(4, ['medium', 'small']);
