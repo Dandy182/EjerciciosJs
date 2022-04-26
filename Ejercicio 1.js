@@ -205,3 +205,7 @@ priceWithMonthlyDiscount(16, 70, 0);
 //=>8960
 priceWithMonthlyDiscount(16, 130, 0.15);
 //=>14528
+
+
+/* Ejercicio 8 */
+
