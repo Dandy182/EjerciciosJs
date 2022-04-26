@@ -195,17 +195,68 @@ function priceWithMonthlyDiscount(ratePerHour, numDays, discount) {
     let ratePerMount = (months * (ratePerDay * 22));
 
     let resultado = Math.ceil((ratePerMount - (ratePerMount * discount)) + diaSobrante);
-    console.log(resultado);
+    console.log(`7. valor mensual a pagar con descuento: ${resultado}`);
  
 }
 
 priceWithMonthlyDiscount(89, 230, 0.42);
 // => 97972
-priceWithMonthlyDiscount(16, 70, 0);
-//=>8960
-priceWithMonthlyDiscount(16, 130, 0.15);
-//=>14528
 
+/* Ejercicio 8*/
 
-/* Ejercicio 8 */
+/*A lot of Li Mei's creations include lime wedges, either as an ingredient or as part of the decoration.
+ So when she starts her shift in the morning she needs to make sure the bin of lime wedges is full for the day ahead.
+
+Implement the function limesToCut which takes the number of lime wedges Li Mei needs to cut and an array representing the 
+supply of whole limes she has at hand. She can get 6 wedges from a 'small' lime, 8 wedges from a 'medium' lime and 10 from a 
+'large' lime. She always cuts the limes in the order in which they appear in the list, starting with the first item. She keeps 
+going until she reached the number of wedges that she needs or until she runs out of limes.
+Li Mei would like to know in advance how many limes she needs to cut. The limesToCut function should return the number of limes 
+to cut.*/
+function limesToCut(wedgesNeeded, limes) {
+    let rodajasNuevas = 0,
+        contador = 0;
+
+        if(wedgesNeeded <= 0 || limes <= 0){
+            contador == 0;
+        }else{
+            while(rodajasNuevas < wedgesNeeded){
+                let lime = limes.shift();
+
+                switch(lime){
+                    case 'small':
+                        rodajasNuevas = rodajasNuevas + 6;
+                        break;
+                    case 'medium':
+                        rodajasNuevas = rodajasNuevas + 8;
+                        break;
+                    case 'large':
+                        rodajasNuevas = rodajasNuevas + 10;
+                        break;
+                    default:
+                        continue; 
+                }
+                contador++;
+                console.log(rodajasNuevas, lime, contador);
+
+            }
+        }
+ 
+
+    
+  }
+  const limes = [
+    'small',
+    'large',
+    'large',
+    'medium',
+    'small',
+    'large',
+    'large',
+    'medium',
+  ];
+
+limesToCut(42, limes);
+limesToCut(4, ['medium', 'small']);
+
 
