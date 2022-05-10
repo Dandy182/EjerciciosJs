@@ -1,43 +1,36 @@
+/* 1. crear una funcion que permita verificar el estado de un asiento de cine */
 
-/* promediar */
-function promedio(array){
-  let resultado = 0;
+// Los asientos en el ticket se represetan como A1, B2, C2, etc
+function checkSeatStatus(row, number){
+    if(typeof row !== 'string')throw new TypeError('First parameter is not a string');
+    if(typeof number !== 'number')throw new TypeError('Second parameter is not a number');
 
-  for(var i = 0; i< array.length; i++){
-    resultado += array[i];
-  }
+    //1 sacar el numero de la fila
 
-  return Math.floor(resultado / array.length);
-
+    const nFila = getRowNumber(row);
+    const filaLayout = layout[nFila];
+    const silla = filaLayout[number];
+    return silla.booked; // esto dá es estatus de la silla (true si está reservada y false si no está reservada)
 }
 
-
-/* ejercicio del extra henry para yest */
-
-
-function checkSeatStatus(row, column){
-  if(typeof row !== 'string')throw new TypeError('First parameter is not a String');
-  if(typeof column !== 'number')throw new TypeError('the second parameter is not a number');
-
-}
 const layout = [
-  [{type: 'VIP', booked: false}, {type: 'VIP', booked: true}, {type: 'VIP', booked: true}, {type: 'VIP', booked: false}],
-  [{type: 'NORMAL', booked: false}, {type: 'VIP', booked: true}, {type: 'VIP', booked: false}, {type: 'NORMAL', booked: false}],
-  [{type: 'NORMAL', booked: false}, {type: 'NORMAL', booked: true}, {type: 'NORMAL', booked: true}, {type: 'NORMAL', booked: false}],
-  [{type: 'ECONOMIC', booked: true}, {type: 'NORMAL', booked: true}, {type: 'NORMAL', booked: true}, {type: 'ECONOMIC', booked: false}],
-  [{type: 'ECONOMIC', booked: false}, {type: 'ECONOMIC', booked: true}, {type: 'ECONOMIC', booked: false}, {type: 'ECONOMIC', booked: false}]
-];
-
+    [{type: 'VIP', booked: false}, {type: 'VIP', booked: true}, {type: 'VIP', booked: true}, {type: 'VIP', booked: false}],
+    [{type: 'NORMAL', booked: false}, {type: 'VIP', booked: true}, {type: 'VIP', booked: false}, {type: 'NORMAL', booked: false}],
+    [{type: 'NORMAL', booked: false}, {type: 'NORMAL', booked: true}, {type: 'NORMAL', booked: true}, {type: 'NORMAL', booked: false}],
+    [{type: 'ECONOMIC', booked: true}, {type: 'NORMAL', booked: true}, {type: 'NORMAL', booked: true}, {type: 'ECONOMIC', booked: false}],
+    [{type: 'ECONOMIC', booked: false}, {type: 'ECONOMIC', booked: true}, {type: 'ECONOMIC', booked: false}, {type: 'ECONOMIC', booked: false}]
+  ];
 
 function getRowNumber(letter) {
-  return letter.charCodeAt() - 65;
+    return letter.charCodeAt() - 65;
+
 }
 
 
 
-//test
+
+
 
 module.exports = {
-   promedio,
-   checkSeatStatus,
-  getRowNumber};
+    checkSeatStatus, getRowNumber
+};

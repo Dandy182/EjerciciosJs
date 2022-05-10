@@ -262,6 +262,7 @@ limesToCut(4, ['medium', 'small']);
 
 
 
+<<<<<<< HEAD
 
 /* ejercicio 1 - curso henry M1 */
 function DecimalABinario(num) {
@@ -285,3 +286,19 @@ function DecimalABinario(num) {
 
 
 
+=======
+function darFactorial(n){
+    if(n < 0){
+        return 'ingrese un numero natural!!!';
+    }else if(n === 1){
+        return 1
+    }else{
+        return n * darFactorial(n-1);
+    }
+
+
+}
+
+
+darFactorial(3);
+>>>>>>> 6a3eb52786246e9726ef6be586bb98f6d7bb9d38
