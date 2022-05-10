@@ -18,6 +18,7 @@ function promedio(array) {
 
     let prom = (sum / array.length);
     console.log(`1. el promedio es ${prom}`);
+    return prom;
     
 }
 
@@ -258,5 +259,29 @@ function limesToCut(wedgesNeeded, limes) {
 
 limesToCut(42, limes);
 limesToCut(4, ['medium', 'small']);
+
+
+
+
+/* ejercicio 1 - curso henry M1 */
+function DecimalABinario(num) {
+    // tu codigo aca
+    let resultado = [];
+  
+    while(num >= 1){
+      resultado.unshift(num % 2);
+      num = Math.floor(num / 2);
+    }
+  
+    console.log(resultado.join(''));
+
+
+  
+  }
+
+  DecimalABinario(9);
+
+  
+
 
 
