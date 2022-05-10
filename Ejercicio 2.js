@@ -27,10 +27,24 @@ function getRowNumber(letter) {
 }
 
 
+function book(row, number){
+    if(checkSeatStatus(row, number)) return `Seat in ${row}${number} is already booked`;
+
+    const nfila = getRowNumber(row);
+    const layoutFila = layout[nfila];
+    const asiento = layoutFila[number];
+    asiento.booked = true;
+    return `Seat in ${row}${number} successfully booked`;
+
+
+}
+
 
 
 
 
 module.exports = {
-    checkSeatStatus, getRowNumber
+    checkSeatStatus,
+     getRowNumber,
+     book
 };

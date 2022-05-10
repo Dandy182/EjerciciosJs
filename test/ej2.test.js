@@ -1,6 +1,7 @@
 const {
     checkSeatStatus,
-     getRowNumber} = require('../Ejercicio 2');
+     getRowNumber, 
+    book} = require('../Ejercicio 2');
 
 
 describe('checkSeatStatus', ()=>{
@@ -25,7 +26,7 @@ describe('checkSeatStatus', ()=>{
         expect(checkSeatStatus('E', 3)).toBe(false);
     })
 })
-disponible
+
 
 describe('getRowNumber', ()=>{
 
@@ -35,5 +36,19 @@ describe('getRowNumber', ()=>{
 
     it('el parametro debe ser un string', ()=>{
         expect(getRowNumber('D')).toBe(3);
+    })
+});
+
+
+describe('book', ()=>{
+
+    it('debe retornar "Seat in XX is successfuly booked" si el asiento aun no está apartado', ()=>{
+        expect(checkSeatStatus('E',3)).toBe(false);
+        expect(book('E',3)).toBe('Seat in E3 successfully booked');
+        expect(checkSeatStatus('E',3)).toBe(true);
+    } )
+
+    it('debe retornar "Seat in xx is alredy booked" si el asiento dado está apartado', ()=>{
+        expect(book('A', 1)).toBe('Seat in A1 is already booked');
     })
 })
