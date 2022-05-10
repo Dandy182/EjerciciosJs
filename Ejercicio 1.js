@@ -260,3 +260,18 @@ limesToCut(42, limes);
 limesToCut(4, ['medium', 'small']);
 
 
+
+function darFactorial(n){
+    if(n < 0){
+        return 'ingrese un numero natural!!!';
+    }else if(n === 1){
+        return 1
+    }else{
+        return n * darFactorial(n-1);
+    }
+
+
+}
+
+
+darFactorial(3);
