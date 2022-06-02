@@ -1,0 +1,26 @@
+{
+  "name": "ejerciciosjs",
+  "version": "1.0.0",
+  "description": "'Ejercicios para aprender bien a programar para pasar el Henry Challenge'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dandy182/EjerciciosJs.git"
+  },
+  "keywords": [
+    "'ejercicios",
+    "js'"
+  ],
+  "author": "Dandy182",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dandy182/EjerciciosJs/issues"
+  },
+  "homepage": "https://github.com/Dandy182/EjerciciosJs#readme",
+  "devDependencies": {
+    "jest": "^28.1.0"
+  }
+}
