@@ -4,7 +4,7 @@
   "description": "'Ejercicios para aprender bien a programar para pasar el Henry Challenge'",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
