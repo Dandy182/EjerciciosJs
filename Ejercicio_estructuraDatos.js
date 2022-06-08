@@ -22,8 +22,32 @@ function factorial(n){
 // [Para más información del método: https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/isArray]
 
 function restArray(array){
+    let resultado = 0;
+    let dato = 0;
+    let arrayCount = 0;
+
+    for(let i = 0; i < array.length; i++){
+
+        if(typeof array[i] === 'number'){
+            resultado += array[i]; 
+        }
+
+        if(Array.isArray(array[i])){
+            arrayCount++;
+            dato += restArray(array[i]);
+        }
+    }
+
+    return (resultado + dato) - arrayCount;
 
 }
+
+
+
+
+const vect = [3, [7, [5,6]], [9,6], 4];
+
+console.log(restArray(vect))
 
 
 module.exports = {
