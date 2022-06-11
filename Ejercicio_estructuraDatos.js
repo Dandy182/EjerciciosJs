@@ -47,7 +47,11 @@ function restArray(array){
 
 const vect = [3, [7, [5,6]], [9,6], 4];
 
-console.log(restArray(vect))
+console.log(restArray(vect));
+
+
+
+//linked list
 
 
 module.exports = {
