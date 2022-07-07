@@ -42,9 +42,6 @@ function restArray(array){
 
 }
 
-
-
-
 const vect = [3, [7, [5,6]], [9,6], 4];
 
 console.log(restArray(vect));

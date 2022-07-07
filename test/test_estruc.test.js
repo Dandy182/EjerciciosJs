@@ -1,7 +1,6 @@
 const {factorial, restArray} = require('../Ejercicio_estructuraDatos');
 
 
-
 it(`Factorial dá el resultado correcto`, function(){
     expect(factorial(5)).toBe(120);
 })
